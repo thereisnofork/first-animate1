@@ -1,0 +1,39 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+#svg1 {
+  margin: 100px auto;
+  width: 60px;
+  height: 100px;
+  stroke: 45px;
+}
+
+#container {
+  width: 100vw;
+  height: 500px;
+  border: 2px solid blue;
+  display: flex;
+}
+#svg1 path {
+  cursor: pointer;
+  stroke-width: 20;
+  stroke: red;
+  fill: transparent;
+
+  stroke-dasharray: 2000;
+  stroke-dashoffset: -2000;
+  animation: anim1 1s ease-in-out alternate infinite;
+}
+
+@keyframes anim1 {
+  0% {
+    stroke-dashoffset: -2000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: black;
+  }
+}
